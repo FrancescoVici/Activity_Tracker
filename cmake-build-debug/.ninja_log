@@ -1,0 +1,4 @@
+# ninja log v5
+2	577	6869524658507660	build.ninja	30d55e5ce44b6603
+1	494	6869524664269552	CMakeFiles/Activity_Tracker.dir/main.cpp.obj	a1bf2717de054a1c
+496	774	6869524667004865	Activity_Tracker.exe	d593fc4b72a669a8
