@@ -65,6 +65,14 @@ build CMakeFiles/Activity_Tracker.dir/Activity.cpp.obj: CXX_COMPILER__Activity_T
   OBJECT_DIR = CMakeFiles\Activity_Tracker.dir
   OBJECT_FILE_DIR = CMakeFiles\Activity_Tracker.dir
 
+build CMakeFiles/Activity_Tracker.dir/Register.cpp.obj: CXX_COMPILER__Activity_Tracker_Debug C$:/Users/franc/OneDrive/Desktop/Activity_Tracker/Register.cpp || cmake_object_order_depends_target_Activity_Tracker
+  DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = CMakeFiles\Activity_Tracker.dir\Register.cpp.obj.d
+  FLAGS = -g -std=gnu++1z
+  INCLUDES = -isystem C:/Qt/5.15.2/mingw81_32/include -isystem C:/Qt/5.15.2/mingw81_32/include/QtCore -isystem C:/Qt/5.15.2/mingw81_32/./mkspecs/win32-g++ -isystem C:/Qt/5.15.2/mingw81_32/include/QtWidgets -isystem C:/Qt/5.15.2/mingw81_32/include/QtGui -isystem C:/Qt/5.15.2/mingw81_32/include/QtANGLE
+  OBJECT_DIR = CMakeFiles\Activity_Tracker.dir
+  OBJECT_FILE_DIR = CMakeFiles\Activity_Tracker.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Activity_Tracker
@@ -73,7 +81,7 @@ build CMakeFiles/Activity_Tracker.dir/Activity.cpp.obj: CXX_COMPILER__Activity_T
 #############################################
 # Link the executable Activity_Tracker.exe
 
-build Activity_Tracker.exe: CXX_EXECUTABLE_LINKER__Activity_Tracker_Debug CMakeFiles/Activity_Tracker.dir/main.cpp.obj CMakeFiles/Activity_Tracker.dir/Activity.cpp.obj | C$:/Qt/5.15.2/mingw81_32/lib/libQt5Widgets.a C$:/Qt/5.15.2/mingw81_32/lib/libQt5Gui.a C$:/Qt/5.15.2/mingw81_32/lib/libQt5Core.a
+build Activity_Tracker.exe: CXX_EXECUTABLE_LINKER__Activity_Tracker_Debug CMakeFiles/Activity_Tracker.dir/main.cpp.obj CMakeFiles/Activity_Tracker.dir/Activity.cpp.obj CMakeFiles/Activity_Tracker.dir/Register.cpp.obj | C$:/Qt/5.15.2/mingw81_32/lib/libQt5Widgets.a C$:/Qt/5.15.2/mingw81_32/lib/libQt5Gui.a C$:/Qt/5.15.2/mingw81_32/lib/libQt5Core.a
   FLAGS = -g
   LINK_LIBRARIES = C:/Qt/5.15.2/mingw81_32/lib/libQt5Widgets.a  C:/Qt/5.15.2/mingw81_32/lib/libQt5Gui.a  C:/Qt/5.15.2/mingw81_32/lib/libQt5Core.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Activity_Tracker.dir

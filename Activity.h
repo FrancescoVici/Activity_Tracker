@@ -16,7 +16,7 @@ public:
     // CONSTRUCTORS
     Activity(const QString& des, const QTime& init, const QTime& fin);
     // DESTRUCTOR
-    ~Activity();
+    ~Activity()=default;
 
     // SETTER
     void setDescription(const QString& des);

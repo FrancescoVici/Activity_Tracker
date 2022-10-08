@@ -14,15 +14,25 @@ Activity::Activity(const QString& des, const QTime& init, const QTime& fin)
     this->setFinTime(fin);
 }
 
+
+
 // DESTRUCTOR
-Activity::~Activity(){}
+// Activity::~Activity(){}
+
+
 
 // SETTER
 void Activity::setDescription(const QString& des){  this->descriprion=des;      }
+
 void Activity::setInitTime(const QTime& init){      this->initialTime=init;     }
+
 void Activity::setFinTime(const QTime& fin){        this->finalTime=fin;        }
+
+
 
 // GETTER
 const QString& Activity::getDescription(){  return this->descriprion;   }
+
 const QTime& Activity::getInitTime(){       return this->initialTime;   }
+
 const QTime& Activity::getFinTime(){        return this->finalTime;     }
