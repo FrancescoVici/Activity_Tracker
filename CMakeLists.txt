@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.14)
 project(Activity_Tracker)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_AUTOMOC ON)
 
 # Tell cmake where Qt is located
 set(Qt5_DIR "~/Qt/5.12.2/clang_64/lib/cmake/Qt5")

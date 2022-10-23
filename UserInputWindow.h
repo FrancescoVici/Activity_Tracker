@@ -22,17 +22,17 @@ class UserInputWindow: public QWidget{
 Q_OBJECT
 public:
     // CONSTRUCTORS
-    explicit UserInputWindow(Register *curr, QWidget *parent = nullptr);
+    explicit UserInputWindow(QWidget *parent = nullptr);
     // DESTRUCTOR
     ~UserInputWindow()override;
     // SETTER
     // GETTER
 
 signals:
-    void sendUserActivityData(QString desc, QTime initT, QTime finT);
+    void sendNewActivity(Activity* newAct);
 
 public slots:
-    void emitUserActivityData(bool click);
+    void emitNewUserActivity(bool click);
 
 private:
     QWidget *parent;
@@ -40,7 +40,6 @@ private:
     QLineEdit *desc;
     QLineEdit *initT;
     QLineEdit *finT;
-    Register *currentReg;
 };
 
 

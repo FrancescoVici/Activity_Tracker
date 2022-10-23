@@ -27,6 +27,7 @@
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
@@ -57,6 +58,7 @@
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
+					<Add directory="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/include"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
@@ -97,6 +99,16 @@
 					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="Activity_Tracker_autogen">
+				<Option working_dir="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Makefile&quot;  VERBOSE=1 Activity_Tracker_autogen"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Activity.cpp">
 			<Option target="Activity_Tracker"/>
@@ -120,6 +132,9 @@
 			<Option target="Activity_Tracker"/>
 		</Unit>
 		<Unit filename="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserInputWindow.h">
+			<Option target="Activity_Tracker"/>
+		</Unit>
+		<Unit filename="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/mocs_compilation.cpp">
 			<Option target="Activity_Tracker"/>
 		</Unit>
 		<Unit filename="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/main.cpp">

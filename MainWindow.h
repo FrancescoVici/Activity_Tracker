@@ -11,10 +11,11 @@
 #include <QDate>
 #include <QTime>
 #include <QWidget>
-#include <QTableView>
+#include <QTableWidget>
 #include <QStandardItemModel>
 #include <QPushButton>
 #include <QComboBox>
+#include <QTableWidgetItem>
 
 #include "Activity.h"
 #include "Register.h"
@@ -29,20 +30,21 @@ public:
     virtual ~MainWindow();
     // SETTER
     void addRegister(Register* reg);
+    void delRegister(Register* reg);
+    Register* getCurrentReg();
     // GETTER
     std::vector<Register*>::iterator getRegistersHead();
     std::vector<Register*>::iterator getRegistersTail();
-    Register* getRegisterAtPos(int pos);
-    Register* getCurrentRegister();
-    // OTHERS
-    void updateActivityTable(Activity *added, bool addRow=0);
+
 
 signals:
-    void addedActivity(bool added=0);
+    void activityChanged(bool changed=false);
 
 public slots:
     void openNewInputWindow(bool click=0);
-    void createNewActivity(QString desc, QTime initT, QTime finT);
+    void pushNewAct(Activity* newAct);
+    void updateRegistersBox(bool changed);
+    void updateActivitiesTable(bool changed);
 
 private:
     QPushButton* addActButton;
@@ -51,7 +53,8 @@ private:
     QComboBox* registers;
     std::vector<Register*> registersList;
 
-    QTableView* activityTable;
+    QTableWidget* activityTable;
+
 };
 
 

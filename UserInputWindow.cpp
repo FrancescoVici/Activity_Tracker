@@ -6,8 +6,8 @@
 
 
 // CONSTRUCTORS
-UserInputWindow::UserInputWindow(Register *curr, QWidget *parent)
-        :currentReg(curr), parent(parent)
+UserInputWindow::UserInputWindow(QWidget *parent)
+        :parent(parent)
 {
     this->setFixedSize(500, 500);
 
@@ -27,12 +27,9 @@ UserInputWindow::UserInputWindow(Register *curr, QWidget *parent)
     this->finT->setGeometry(10, 130, 480, 50);
     this->finT->setPlaceholderText("Set Final Time (format: HH:MM:SS)");
 
-// connect(this->addActButton, SIGNAL(clicked()),this, SLOT(openNewInputWindow()));
-    connect(this->confirm, SIGNAL(clicked(bool)),this, SLOT(emitUserActivityData(bool)));
+    connect(this->confirm, SIGNAL(clicked(bool)),this, SLOT(emitNewUserActivity(bool)));
     connect (this->confirm, SIGNAL(clicked(bool)), this, SLOT(close()));
-
-    connect(this, SIGNAL(sendUserActivityData(QString, QTime, QTime)), this->parent, SLOT(createNewActivity(QString, QTime, QTime)));
-
+    connect(this, SIGNAL(sendNewActivity(Activity*)), this->parent, SLOT(pushNewAct(Activity*)));
 }
 
 // DESTRUCTOR
@@ -49,7 +46,7 @@ UserInputWindow::~UserInputWindow()
 // GETTER
 
 //SLOTS
-void UserInputWindow::emitUserActivityData(bool click=false)
+void UserInputWindow::emitNewUserActivity(bool click)
 {
     if(click==0){
         QString text = desc->text();
@@ -59,6 +56,8 @@ void UserInputWindow::emitUserActivityData(bool click=false)
         QTime initTime= QTime::fromString(init, "HH:mm:ss");
         QTime finTime= QTime::fromString(fin, "HH:mm:ss");
 
-        emit sendUserActivityData(text, initTime, finTime);
+        auto newAct= new Activity(text, initTime, finTime);
+
+        emit sendNewActivity(newAct);
     }
 }

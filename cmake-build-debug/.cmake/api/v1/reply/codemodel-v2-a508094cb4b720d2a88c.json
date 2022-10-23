@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "Activity_Tracker",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -39,8 +41,15 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Activity_Tracker::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Activity_Tracker-Debug-65c56dcd82b814c04980.json",
+					"jsonFile" : "target-Activity_Tracker-Debug-3ed2e4e2eedd35d9f94d.json",
 					"name" : "Activity_Tracker",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Activity_Tracker_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Activity_Tracker_autogen-Debug-b550cc56f8f9baa00044.json",
+					"name" : "Activity_Tracker_autogen",
 					"projectIndex" : 0
 				}
 			]

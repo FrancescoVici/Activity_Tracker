@@ -69,10 +69,24 @@ include CMakeFiles/Activity_Tracker.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Activity_Tracker.dir/flags.make
 
+CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
+CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o: Activity_Tracker_autogen/mocs_compilation.cpp
+CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o -MF CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/mocs_compilation.cpp
+
+CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/mocs_compilation.cpp > CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/mocs_compilation.cpp -o CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/Activity_Tracker.dir/main.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
 CMakeFiles/Activity_Tracker.dir/main.cpp.o: ../main.cpp
 CMakeFiles/Activity_Tracker.dir/main.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Activity_Tracker.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Activity_Tracker.dir/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/main.cpp.o -MF CMakeFiles/Activity_Tracker.dir/main.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/main.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/main.cpp
 
 CMakeFiles/Activity_Tracker.dir/main.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/Activity_Tracker.dir/main.cpp.s: cmake_force
 CMakeFiles/Activity_Tracker.dir/Activity.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
 CMakeFiles/Activity_Tracker.dir/Activity.cpp.o: ../Activity.cpp
 CMakeFiles/Activity_Tracker.dir/Activity.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Activity_Tracker.dir/Activity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Activity_Tracker.dir/Activity.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/Activity.cpp.o -MF CMakeFiles/Activity_Tracker.dir/Activity.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/Activity.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Activity.cpp
 
 CMakeFiles/Activity_Tracker.dir/Activity.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/Activity_Tracker.dir/Activity.cpp.s: cmake_force
 CMakeFiles/Activity_Tracker.dir/Register.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
 CMakeFiles/Activity_Tracker.dir/Register.cpp.o: ../Register.cpp
 CMakeFiles/Activity_Tracker.dir/Register.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Activity_Tracker.dir/Register.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Activity_Tracker.dir/Register.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/Register.cpp.o -MF CMakeFiles/Activity_Tracker.dir/Register.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/Register.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Register.cpp
 
 CMakeFiles/Activity_Tracker.dir/Register.cpp.i: cmake_force
@@ -114,7 +128,7 @@ CMakeFiles/Activity_Tracker.dir/Register.cpp.s: cmake_force
 CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
 CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o: ../MainWindow.cpp
 CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o -MF CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/MainWindow.cpp
 
 CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.s: cmake_force
 CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
 CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o: ../UserInputWindow.cpp
 CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o -MF CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserInputWindow.cpp
 
 CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.i: cmake_force
@@ -141,6 +155,7 @@ CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.s: cmake_force
 
 # Object files for target Activity_Tracker
 Activity_Tracker_OBJECTS = \
+"CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/Activity_Tracker.dir/main.cpp.o" \
 "CMakeFiles/Activity_Tracker.dir/Activity.cpp.o" \
 "CMakeFiles/Activity_Tracker.dir/Register.cpp.o" \
@@ -150,6 +165,7 @@ Activity_Tracker_OBJECTS = \
 # External object files for target Activity_Tracker
 Activity_Tracker_EXTERNAL_OBJECTS =
 
+Activity_Tracker: CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/main.cpp.o
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/Activity.cpp.o
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/Register.cpp.o
@@ -160,7 +176,7 @@ Activity_Tracker: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
 Activity_Tracker: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
 Activity_Tracker: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Activity_Tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Activity_Tracker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Activity_Tracker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

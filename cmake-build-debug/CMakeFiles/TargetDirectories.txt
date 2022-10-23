@@ -1,3 +1,4 @@
 /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles/Activity_Tracker.dir
 /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles/Activity_Tracker_autogen.dir

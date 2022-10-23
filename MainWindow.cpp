@@ -18,28 +18,25 @@ MainWindow::MainWindow(QWidget *parent)
     removeActButton->setGeometry(170, 10, 150, 50);
     removeActButton->setText("Remove Activity");
 
-    QStandardItemModel* model=new QStandardItemModel(0,4);
-    model->setHeaderData(0, Qt::Horizontal, QObject::tr("Checked"));
-    model->setHeaderData(1, Qt::Horizontal, QObject::tr("Activity Description"));
-    model->setHeaderData(2, Qt::Horizontal, QObject::tr("From (time)"));
-    model->setHeaderData(3, Qt::Horizontal, QObject::tr("To (time)"));
+    registers=new QComboBox(this);
+    registers->setGeometry(10, 80, 150, 50);
 
-    activityTable = new QTableView(this);
-    activityTable->setGeometry(10,70, 980, 420);
-    activityTable->setModel(model);
+    activityTable = new QTableWidget(1, 4 ,this);
+    activityTable->setGeometry(170,80, 780, 400);
+    auto labels= new QStringList();
+    labels->push_back("Checked");
+    labels->push_back("Description");
+    labels->push_back("Initial Time");
+    labels->push_back("Final Time");
+    this->activityTable->setHorizontalHeaderLabels(*labels);
     activityTable->resizeColumnsToContents();
 
-    registers=new QComboBox(this);
-    registers->setGeometry(100, 100, 100, 100);
-    auto itr=registersList.begin();
-    for(int i=0; i<registersList.size();i++)
-    {
-        registers->addItem((*itr)->getName());
-        itr++;
-    }
 
 
     connect(this->addActButton, SIGNAL(clicked()),this, SLOT(openNewInputWindow()));
+    /// connect(this->removeActButton, SIGNAL(clicked()), this, SLOT(removeActivity(Activity*)));
+    connect(this, SIGNAL(activityChanged(bool)), this, SLOT(updateActivitiesTable(bool)));
+
 
 }
 
@@ -58,64 +55,78 @@ MainWindow::~MainWindow()
 // SETTER
 void MainWindow::addRegister(Register* reg)
 {
-    this->registersList.push_back(reg);
+    auto itr=this->registersList.begin();
+ /*   while(reg->getDate()!=(*itr)->getDate()){
+        ++itr;
+    }*/
+    this->registersList.insert(itr, reg);
+    this->registers->addItem(reg->getName());
 }
+
+//void MainWindow::delRegister(Register* reg) {}
+
+
 
 // GETTER
-std::vector<Register*>::iterator MainWindow::getRegistersHead(){    return registersList.begin();   }
+std::vector<Register*>::iterator MainWindow::getRegistersHead(){    return this->registersList.begin();   }
 
-std::vector<Register*>::iterator MainWindow::getRegistersTail(){    return registersList.end();     }
+std::vector<Register*>::iterator MainWindow::getRegistersTail(){    return this->registersList.end();     }
 
-Register* MainWindow::getRegisterAtPos(int pos)
-{
+Register* MainWindow::getCurrentReg(){
     auto itr=this->getRegistersHead();
-    for(int i=0; i<pos; i++){
-        itr++;
-    }
-    return (*itr);
+    while((*itr)->getName()!=this->registers->currentText())
+        ++itr;
+    return *itr;
 }
 
-Register* MainWindow::getCurrentRegister()
-{
-    return this->getRegisterAtPos(registers->currentIndex());
-}
 
 // SLOTS
 void MainWindow::openNewInputWindow(bool click)
 {
     if(click==0){
-        UserInputWindow *input=new UserInputWindow(this->getCurrentRegister(), this);
+        auto *input=new UserInputWindow(this);
         input->show();
     }
 }
 
-void MainWindow::createNewActivity(QString desc, QTime initT, QTime finT)
+void MainWindow::pushNewAct(Activity* newAct)
 {
-    Activity *toAdd=new Activity(desc, initT, finT);
-    this->getCurrentRegister()->addActivity(toAdd);
-
-    this->updateActivityTable(toAdd, 1);
+    this->getCurrentReg()->addActivity(newAct);
+    emit activityChanged(true);
 }
 
-// OTHERS
-void MainWindow::updateActivityTable(Activity *added, bool addRow)
+void MainWindow::updateRegistersBox(bool changed)
 {
-    QAbstractItemModel *model= this->activityTable->model();
-    if(addRow){
-        int c=model->rowCount();
-        c++;
-        model->insertRow(c);
-        QModelIndex i1=model->index(c, 1);
-        QModelIndex i2=model->index(c, 2);
-        QModelIndex i3=model->index(c, 3);
-        QModelIndex i4=model->index(c, 4);
-        // TODO add a checkable button for any row
-        model->setData(i2, added->getDescription());
-        model->setData(i3, added->getInitTime());
-        model->setData(i4, added->getFinTime());
-
-        this->activityTable->setModel(model);
-        this->activityTable->show();
+    if (changed){
+        auto itr = registersList.begin();
+        for (int i = 0; i < registersList.size(); i++) {
+            registers->addItem((*itr)->getName());
+            itr++;
+        }
     }
+}
 
+void MainWindow::updateActivitiesTable(bool changed)
+{
+    if (changed){
+        this->activityTable->clear();
+        this->activityTable->setRowCount(this->getCurrentReg()->getActivityLenght());
+        int i=1;
+        for(auto itr=this->getCurrentReg()->getDailyActHead();itr<=this->getCurrentReg()->getDailyActTail(); itr++){
+
+            auto desc=(*itr)->getDescription();
+            auto itemDesc = new QTableWidgetItem(desc);
+            this->activityTable->setItem(i, 2, itemDesc);
+
+            auto init=(*itr)->getInitTime();
+            auto itemInitTime = new QTableWidgetItem(init.toString("HH:mm:ss"));
+            this->activityTable->setItem(i, 3, itemInitTime);
+
+            auto fin=(*itr)->getFinTime();
+            auto itemFinTime = new QTableWidgetItem(fin.toString("HH:mm:ss"));
+            this->activityTable->setItem(i, 4, itemFinTime);
+
+            i++;
+        }
+    }
 }

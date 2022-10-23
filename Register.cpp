@@ -5,23 +5,17 @@
 #include "Register.h"
 
 // CONSTRUCTORS
-Register::Register(const QString& name, const QDate& date, Activity* toAdd)
+Register::Register(const QString& name, const QDate& date)
 {
     this->setName(name);
     this->setDate(date);
-    this->addActivity(toAdd);
 }
-
-
 
 // DESTRUCTOR
-Register::~Register()
-{
-    for(auto itr=this->dailyActivities.begin(); itr<this->dailyActivities.end(); itr++)
+Register::~Register(){
+    for(auto itr=this->getDailyActHead(); itr<= this->getDailyActTail(); itr++)
         delete(*itr);
 }
-
-
 
 // SETTER
 void Register::setName(const QString& name){    this->name=name;    }
@@ -30,18 +24,18 @@ void Register::setDate(const QDate& date){      this->date=date;    }
 
 void Register::addActivity(Activity* toAdd)
 {
+    auto itr=this->dailyActivities.begin();
+    while((*itr)->getInitTime()!=toAdd->getInitTime())
     this->dailyActivities.push_back(toAdd);
 }
 
 void Register::removeActivity(int pos)
 {
-    auto itr=dailyActivities.begin();
+    auto itr=this->dailyActivities.begin();
     for(int i=0; i<pos; i++)
         ++itr;
-    delete(*itr);
+    this->dailyActivities.erase(itr);
 }
-
-
 
 // GETTER
 const QString& Register::getName(){     return this->name;  }
@@ -58,4 +52,12 @@ Activity* Register::getActivity(int pos)
     for(int i=0; i<pos; i++)
         ++itr;
     return *itr;
+}
+
+int Register::getActivityLenght()
+{
+    int i=0;
+    for(auto itr=this->getDailyActHead(); itr<this->getDailyActTail(); itr++)
+        ++i;
+    return i;
 }

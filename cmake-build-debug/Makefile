@@ -129,6 +129,19 @@ Activity_Tracker/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/build
 .PHONY : Activity_Tracker/fast
 
+#=============================================================================
+# Target rules for targets named Activity_Tracker_autogen
+
+# Build rule for target.
+Activity_Tracker_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Activity_Tracker_autogen
+.PHONY : Activity_Tracker_autogen
+
+# fast build rule for target.
+Activity_Tracker_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker_autogen.dir/build.make CMakeFiles/Activity_Tracker_autogen.dir/build
+.PHONY : Activity_Tracker_autogen/fast
+
 Activity.o: Activity.cpp.o
 .PHONY : Activity.o
 
@@ -152,6 +165,30 @@ Activity.s: Activity.cpp.s
 Activity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/Activity.cpp.s
 .PHONY : Activity.cpp.s
+
+Activity_Tracker_autogen/mocs_compilation.o: Activity_Tracker_autogen/mocs_compilation.cpp.o
+.PHONY : Activity_Tracker_autogen/mocs_compilation.o
+
+# target to build an object file
+Activity_Tracker_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o
+.PHONY : Activity_Tracker_autogen/mocs_compilation.cpp.o
+
+Activity_Tracker_autogen/mocs_compilation.i: Activity_Tracker_autogen/mocs_compilation.cpp.i
+.PHONY : Activity_Tracker_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+Activity_Tracker_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.i
+.PHONY : Activity_Tracker_autogen/mocs_compilation.cpp.i
+
+Activity_Tracker_autogen/mocs_compilation.s: Activity_Tracker_autogen/mocs_compilation.cpp.s
+.PHONY : Activity_Tracker_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+Activity_Tracker_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.s
+.PHONY : Activity_Tracker_autogen/mocs_compilation.cpp.s
 
 MainWindow.o: MainWindow.cpp.o
 .PHONY : MainWindow.o
@@ -257,10 +294,14 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Activity_Tracker_autogen"
 	@echo "... Activity_Tracker"
 	@echo "... Activity.o"
 	@echo "... Activity.i"
 	@echo "... Activity.s"
+	@echo "... Activity_Tracker_autogen/mocs_compilation.o"
+	@echo "... Activity_Tracker_autogen/mocs_compilation.i"
+	@echo "... Activity_Tracker_autogen/mocs_compilation.s"
 	@echo "... MainWindow.o"
 	@echo "... MainWindow.i"
 	@echo "... MainWindow.s"
