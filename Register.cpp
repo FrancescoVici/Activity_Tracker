@@ -24,8 +24,6 @@ void Register::setDate(const QDate& date){      this->date=date;    }
 
 void Register::addActivity(Activity* toAdd)
 {
-    auto itr=this->dailyActivities.begin();
-    while((*itr)->getInitTime()!=toAdd->getInitTime())
     this->dailyActivities.push_back(toAdd);
 }
 

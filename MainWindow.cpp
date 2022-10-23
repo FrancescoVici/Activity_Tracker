@@ -109,24 +109,35 @@ void MainWindow::updateRegistersBox(bool changed)
 void MainWindow::updateActivitiesTable(bool changed)
 {
     if (changed){
-        this->activityTable->clear();
-        this->activityTable->setRowCount(this->getCurrentReg()->getActivityLenght());
-        int i=1;
-        for(auto itr=this->getCurrentReg()->getDailyActHead();itr<=this->getCurrentReg()->getDailyActTail(); itr++){
 
+        this->activityTable->clear();
+        auto labels= new QStringList();
+        labels->push_back("Checked");
+        labels->push_back("Description");
+        labels->push_back("Initial Time");
+        labels->push_back("Final Time");
+        this->activityTable->setHorizontalHeaderLabels(*labels);
+        this->activityTable->resizeColumnsToContents();
+
+        this->activityTable->setRowCount(this->getCurrentReg()->getActivityLenght());
+        int i=0;
+        for(auto itr=this->getCurrentReg()->getDailyActHead();itr<this->getCurrentReg()->getDailyActTail(); itr++){
+
+            this->activityTable->insertRow(i);
             auto desc=(*itr)->getDescription();
             auto itemDesc = new QTableWidgetItem(desc);
-            this->activityTable->setItem(i, 2, itemDesc);
+            this->activityTable->setItem(i, 1, itemDesc);
 
             auto init=(*itr)->getInitTime();
             auto itemInitTime = new QTableWidgetItem(init.toString("HH:mm:ss"));
-            this->activityTable->setItem(i, 3, itemInitTime);
+            this->activityTable->setItem(i, 2, itemInitTime);
 
             auto fin=(*itr)->getFinTime();
             auto itemFinTime = new QTableWidgetItem(fin.toString("HH:mm:ss"));
-            this->activityTable->setItem(i, 4, itemFinTime);
+            this->activityTable->setItem(i, 3, itemFinTime);
 
             i++;
         }
+        this->activityTable->removeRow(i);
     }
 }
