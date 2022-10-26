@@ -19,7 +19,7 @@
 
 
 class UserInputWindow: public QWidget{
-Q_OBJECT
+    Q_OBJECT
 public:
     // CONSTRUCTORS
     explicit UserInputWindow(QWidget *parent = nullptr);

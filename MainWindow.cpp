@@ -8,34 +8,35 @@
 MainWindow::MainWindow(QWidget *parent)
         :QWidget(parent)
 {
-    this->setFixedSize(1000, 500);
-
-    addActButton = new QPushButton(this);
-    addActButton->setGeometry(10, 10, 150, 50);
-    addActButton->setText("Add Activity");
-
-    removeActButton = new QPushButton(this);
-    removeActButton->setGeometry(170, 10, 150, 50);
-    removeActButton->setText("Remove Activity");
+    this->setFixedSize(700, 500);
 
     registers=new QComboBox(this);
-    registers->setGeometry(10, 80, 150, 50);
+    registers->setGeometry(10, 10, 200, 50);
 
-    activityTable = new QTableWidget(1, 4 ,this);
-    activityTable->setGeometry(170,80, 780, 400);
+    addActButton = new QPushButton(this);
+    addActButton->setGeometry(220, 10, 150, 50);
+    addActButton->setText("Add Activity");
+
+    activityTable = new QTableWidget(0, 4 ,this);
+    activityTable->setGeometry(10,70, 680, 420);
     auto labels= new QStringList();
-    labels->push_back("Checked");
-    labels->push_back("Description");
     labels->push_back("Initial Time");
     labels->push_back("Final Time");
+    labels->push_back("Activity");
+    labels->push_back("DEL");
     this->activityTable->setHorizontalHeaderLabels(*labels);
-    activityTable->resizeColumnsToContents();
+    this->activityTable->setColumnWidth(0, 100);
+    this->activityTable->setColumnWidth(1, 100);
+    this->activityTable->setColumnWidth(2, 420);
+    this->activityTable->setColumnWidth(3, 60);
 
 
 
     connect(this->addActButton, SIGNAL(clicked()),this, SLOT(openNewInputWindow()));
-    /// connect(this->removeActButton, SIGNAL(clicked()), this, SLOT(removeActivity(Activity*)));
+    // connect(this->removeActButton, SIGNAL(clicked()), this, SLOT(removeActivity(Activity*)));
     connect(this, SIGNAL(activityChanged(bool)), this, SLOT(updateActivitiesTable(bool)));
+    // TODO adattare updateActivitiesTable per ricevere anche un QString
+    // connect(this->registers, SIGNAL(currentTextChanged(const QString&)), this, SLOT(updateActivitiesTable(bool)));
 
 
 }
@@ -111,33 +112,40 @@ void MainWindow::updateActivitiesTable(bool changed)
     if (changed){
 
         this->activityTable->clear();
+        this->activityTable->rowCount();
+
         auto labels= new QStringList();
-        labels->push_back("Checked");
-        labels->push_back("Description");
         labels->push_back("Initial Time");
         labels->push_back("Final Time");
+        labels->push_back("Activity");
+        labels->push_back("DEL");
         this->activityTable->setHorizontalHeaderLabels(*labels);
-        this->activityTable->resizeColumnsToContents();
+        this->activityTable->setColumnWidth(0, 100);
+        this->activityTable->setColumnWidth(1, 100);
+        this->activityTable->setColumnWidth(2, 420);
+        this->activityTable->setColumnWidth(3, 60);
 
-        this->activityTable->setRowCount(this->getCurrentReg()->getActivityLenght());
         int i=0;
-        for(auto itr=this->getCurrentReg()->getDailyActHead();itr<this->getCurrentReg()->getDailyActTail(); itr++){
 
-            this->activityTable->insertRow(i);
-            auto desc=(*itr)->getDescription();
-            auto itemDesc = new QTableWidgetItem(desc);
-            this->activityTable->setItem(i, 1, itemDesc);
+        for(auto itr=this->getCurrentReg()->getDailyActHead();itr<this->getCurrentReg()->getDailyActTail(); itr++){
+            if(i+1>this->activityTable->rowCount())
+                this->activityTable->insertRow(i);
 
             auto init=(*itr)->getInitTime();
             auto itemInitTime = new QTableWidgetItem(init.toString("HH:mm:ss"));
-            this->activityTable->setItem(i, 2, itemInitTime);
+            this->activityTable->setItem(i, 0, itemInitTime);
 
             auto fin=(*itr)->getFinTime();
             auto itemFinTime = new QTableWidgetItem(fin.toString("HH:mm:ss"));
-            this->activityTable->setItem(i, 3, itemFinTime);
+            this->activityTable->setItem(i, 1, itemFinTime);
+
+            auto desc=(*itr)->getDescription();
+            auto itemDesc = new QTableWidgetItem(desc);
+            this->activityTable->setItem(i, 2, itemDesc);
+
+            // TODO aggiungi tasto "Elimina Attività" in ogni riga nella colonna di indice 3
 
             i++;
         }
-        this->activityTable->removeRow(i);
     }
 }
