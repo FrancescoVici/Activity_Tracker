@@ -27,7 +27,7 @@ public:
     void setName(const QString& name);
     void setDate(const QDate& date);
     void addActivity(Activity* toAdd);
-    void removeActivity(int pos);
+    void removeActivity(const QString& desc);
 
     // GETTER
     const QString& getName();

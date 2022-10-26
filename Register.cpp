@@ -27,10 +27,10 @@ void Register::addActivity(Activity* toAdd)
     this->dailyActivities.push_back(toAdd);
 }
 
-void Register::removeActivity(int pos)
+void Register::removeActivity(const QString& desc)
 {
     auto itr=this->dailyActivities.begin();
-    for(int i=0; i<pos; i++)
+    while((*itr)->getDescription()!=desc)
         ++itr;
     this->dailyActivities.erase(itr);
 }

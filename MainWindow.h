@@ -29,9 +29,11 @@ public:
     // DESTRUCTOR
     virtual ~MainWindow();
     // SETTER
+    void setTableModel();
     void addRegister(Register* reg);
     void delRegister(Register* reg);
-    Register* getCurrentReg();
+    Register* getRegister(const QString& reg);
+    void addRowsToRegister(const QString& reg);
     // GETTER
     std::vector<Register*>::iterator getRegistersHead();
     std::vector<Register*>::iterator getRegistersTail();
@@ -45,10 +47,11 @@ public slots:
     void pushNewAct(Activity* newAct);
     void updateRegistersBox(bool changed);
     void updateActivitiesTable(bool changed);
+    void updateActivitiesTable(const QString& current);
 
 private:
     QPushButton* addActButton;
-    QPushButton* removeActButton;
+    QPushButton* deleteActButton;
 
     QComboBox* registers;
     std::vector<Register*> registersList;

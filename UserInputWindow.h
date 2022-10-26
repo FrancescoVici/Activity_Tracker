@@ -25,8 +25,6 @@ public:
     explicit UserInputWindow(QWidget *parent = nullptr);
     // DESTRUCTOR
     ~UserInputWindow()override;
-    // SETTER
-    // GETTER
 
 signals:
     void sendNewActivity(Activity* newAct);
