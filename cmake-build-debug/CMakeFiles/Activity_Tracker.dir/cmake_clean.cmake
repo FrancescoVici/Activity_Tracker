@@ -12,6 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o.d"
   "CMakeFiles/Activity_Tracker.dir/Register.cpp.o"
   "CMakeFiles/Activity_Tracker.dir/Register.cpp.o.d"
+  "CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.o"
+  "CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.o.d"
   "CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o"
   "CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o.d"
   "CMakeFiles/Activity_Tracker.dir/main.cpp.o"

@@ -25,8 +25,8 @@ MainWindow::MainWindow(QWidget *parent)
     this->activityTable->setGeometry(10,70, 630, 420);
     this->setTableModel();
 
-    connect(this->addActButton, SIGNAL(clicked()),this, SLOT(openNewInputWindow()));
-    // connect(this->removeActButton, SIGNAL(clicked()), this, SLOT(removeActivity(Activity*)));
+    connect(this->addActButton, SIGNAL(clicked()),this, SLOT(openUserInputWindow()));
+    connect(this->deleteActButton, SIGNAL(clicked()), this, SLOT(openUserDeleteWindow()));
     connect(this, SIGNAL(activityChanged(bool)), this, SLOT(updateActivitiesTable(bool)));
     connect(this->registers, SIGNAL(currentTextChanged(const QString&)), this, SLOT(updateActivitiesTable(const QString&)));
 }
@@ -110,7 +110,7 @@ Register* MainWindow::getRegister(const QString& reg){
 
 
 // SLOTS
-void MainWindow::openNewInputWindow(bool click)
+void MainWindow::openUserInputWindow(bool click)
 {
     if(click==0){
         auto *input=new UserInputWindow(this);
@@ -118,9 +118,28 @@ void MainWindow::openNewInputWindow(bool click)
     }
 }
 
+void MainWindow::openUserDeleteWindow(bool click)
+{
+    if(click==0){
+        auto descriptions=new QList<QString>;
+        for(auto itr=this->getRegister(this->registers->currentText())->getDailyActHead();itr<this->getRegister(this->registers->currentText())->getDailyActTail(); itr++){
+            descriptions->push_back((*itr)->getDescription());
+        }
+
+        auto *del=new UserDeleteWindow(*descriptions,this);
+        del->show();
+    }
+}
+
 void MainWindow::pushNewAct(Activity* newAct)
 {
     this->getRegister(this->registers->currentText())->addActivity(newAct);
+    emit activityChanged(true);
+}
+
+void MainWindow::receiveActivityToDelete(const QString &toRemove)
+{
+    this->getRegister(this->registers->currentText())->removeActivity(toRemove);
     emit activityChanged(true);
 }
 

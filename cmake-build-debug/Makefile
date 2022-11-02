@@ -238,6 +238,30 @@ Register.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/Register.cpp.s
 .PHONY : Register.cpp.s
 
+UserDeleteWindow.o: UserDeleteWindow.cpp.o
+.PHONY : UserDeleteWindow.o
+
+# target to build an object file
+UserDeleteWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.o
+.PHONY : UserDeleteWindow.cpp.o
+
+UserDeleteWindow.i: UserDeleteWindow.cpp.i
+.PHONY : UserDeleteWindow.i
+
+# target to preprocess a source file
+UserDeleteWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.i
+.PHONY : UserDeleteWindow.cpp.i
+
+UserDeleteWindow.s: UserDeleteWindow.cpp.s
+.PHONY : UserDeleteWindow.s
+
+# target to generate assembly for a file
+UserDeleteWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.s
+.PHONY : UserDeleteWindow.cpp.s
+
 UserInputWindow.o: UserInputWindow.cpp.o
 .PHONY : UserInputWindow.o
 
@@ -308,6 +332,9 @@ help:
 	@echo "... Register.o"
 	@echo "... Register.i"
 	@echo "... Register.s"
+	@echo "... UserDeleteWindow.o"
+	@echo "... UserDeleteWindow.i"
+	@echo "... UserDeleteWindow.s"
 	@echo "... UserInputWindow.o"
 	@echo "... UserInputWindow.i"
 	@echo "... UserInputWindow.s"

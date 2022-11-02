@@ -20,6 +20,7 @@
 #include "Activity.h"
 #include "Register.h"
 #include "UserInputWindow.h"
+#include "UserDeleteWindow.h"
 
 class MainWindow: public QWidget{
     Q_OBJECT
@@ -31,7 +32,7 @@ public:
     // SETTER
     void setTableModel();
     void addRegister(Register* reg);
-    void delRegister(Register* reg);
+    /// void delRegister(Register* reg);
     Register* getRegister(const QString& reg);
     void addRowsToRegister(const QString& reg);
     // GETTER
@@ -43,8 +44,10 @@ signals:
     void activityChanged(bool changed=false);
 
 public slots:
-    void openNewInputWindow(bool click=0);
+    void openUserInputWindow(bool click=0);
+    void openUserDeleteWindow(bool click=0);
     void pushNewAct(Activity* newAct);
+    void receiveActivityToDelete(const QString& toRemove);
     void updateRegistersBox(bool changed);
     void updateActivitiesTable(bool changed);
     void updateActivitiesTable(const QString& current);

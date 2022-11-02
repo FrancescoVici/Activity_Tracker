@@ -128,6 +128,12 @@
 		<Unit filename="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Register.h">
 			<Option target="Activity_Tracker"/>
 		</Unit>
+		<Unit filename="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserDeleteWindow.cpp">
+			<Option target="Activity_Tracker"/>
+		</Unit>
+		<Unit filename="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserDeleteWindow.h">
+			<Option target="Activity_Tracker"/>
+		</Unit>
 		<Unit filename="/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserInputWindow.cpp">
 			<Option target="Activity_Tracker"/>
 		</Unit>

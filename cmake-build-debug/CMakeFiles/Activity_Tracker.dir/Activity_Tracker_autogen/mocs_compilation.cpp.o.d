@@ -334,5 +334,8 @@ CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o:
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
  /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/EWIEGA46WW/../../../MainWindow.h \
+ /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/EWIEGA46WW/../../../UserDeleteWindow.h \
+ /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/EWIEGA46WW/moc_UserDeleteWindow.cpp \
+ /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/EWIEGA46WW/../../../UserDeleteWindow.h \
  /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/EWIEGA46WW/moc_UserInputWindow.cpp \
  /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/EWIEGA46WW/../../../UserInputWindow.h

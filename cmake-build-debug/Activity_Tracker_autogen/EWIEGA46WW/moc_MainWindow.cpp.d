@@ -3,6 +3,7 @@
   /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Activity.h \
   /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/MainWindow.h \
   /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Register.h \
+  /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserDeleteWindow.h \
   /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserInputWindow.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

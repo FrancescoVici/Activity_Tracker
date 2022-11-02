@@ -330,4 +330,5 @@ CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h \
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidgetItem \
  /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Activity.h \
- /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Register.h
+ /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Register.h \
+ /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserDeleteWindow.h

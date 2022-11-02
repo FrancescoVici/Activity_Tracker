@@ -1,4 +1,4 @@
-/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/EWIEGA46WW/moc_UserInputWindow.cpp: /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserInputWindow.h \
+/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/EWIEGA46WW/moc_UserDeleteWindow.cpp: /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserDeleteWindow.h \
   /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/moc_predefs.h \
   /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Activity.h \
   /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/MainWindow.h \
