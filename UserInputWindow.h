@@ -12,6 +12,7 @@
 #include <QLineEdit>
 #include <QString>
 #include <QTime>
+#include <QLabel>
 
 #include "MainWindow.h"
 #include "Register.h"
@@ -23,6 +24,7 @@ class UserInputWindow: public QWidget{
 public:
     // CONSTRUCTORS
     explicit UserInputWindow(QWidget *parent = nullptr);
+    UserInputWindow(QWidget *parent, const QString& error);
     // DESTRUCTOR
     ~UserInputWindow()override;
 
@@ -38,6 +40,7 @@ private:
     QLineEdit *desc;
     QLineEdit *initT;
     QLineEdit *finT;
+    QLabel *err;
 };
 
 

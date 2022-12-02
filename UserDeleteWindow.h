@@ -10,6 +10,7 @@
 #include <QPushButton>
 #include <QString>
 #include <QComboBox>
+#include <QLabel>
 
 #include "MainWindow.h"
 #include "Register.h"
@@ -33,6 +34,7 @@ private:
     QWidget *parent;
     QComboBox *activityComboBox;
     QPushButton *confirm;
+    QLabel *err;
 };
 
 

@@ -8,7 +8,7 @@
 MainWindow::MainWindow(QWidget *parent)
         :QWidget(parent)
 {
-    this->setFixedSize(700, 500);
+    this->setFixedSize(650, 500);
 
     this->registers=new QComboBox(this);
     this->registers->setGeometry(10, 10, 200, 50);

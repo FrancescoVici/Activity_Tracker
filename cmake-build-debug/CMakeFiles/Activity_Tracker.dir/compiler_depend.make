@@ -685,6 +685,8 @@ CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o:
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   ../MainWindow.h \
   ../UserDeleteWindow.h \
   Activity_Tracker_autogen/EWIEGA46WW/moc_UserDeleteWindow.cpp \
@@ -1071,6 +1073,8 @@ CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o: ../MainWindow.cpp \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   ../UserDeleteWindow.h
 
 CMakeFiles/Activity_Tracker.dir/Register.cpp.o: ../Register.cpp \
@@ -1736,6 +1740,8 @@ CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.o: ../UserDeleteWindow.cpp 
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   ../MainWindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDate \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
@@ -2111,6 +2117,8 @@ CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o: ../UserInputWindow.cpp \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   ../MainWindow.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QDate \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTableWidget \
@@ -2535,6 +2543,8 @@ CMakeFiles/Activity_Tracker.dir/main.cpp.o: ../main.cpp \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h \
   ../UserDeleteWindow.h
 
 
@@ -2601,6 +2611,8 @@ CMakeFiles/Activity_Tracker.dir/main.cpp.o: ../main.cpp \
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h:
 
@@ -2821,6 +2833,8 @@ Activity_Tracker_autogen/EWIEGA46WW/moc_MainWindow.cpp:
 ../main.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h:
 

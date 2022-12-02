@@ -10,8 +10,13 @@ UserDeleteWindow::UserDeleteWindow(const QList<QString>& activities, QWidget *pa
 {
     this->setFixedSize(400, 250);
 
+
+    this->err=new QLabel(this);
+    this->err->setGeometry(10, 0, 380, 30);
+    this->err->setText("Choose the Activity to delete");
+
     this->activityComboBox=new QComboBox(this);
-    this->activityComboBox->setGeometry(10, 10, 200, 50);
+    this->activityComboBox->setGeometry(75, 40, 250, 50);
 
     for(int i=0; i<activities.size();i++){
         this->activityComboBox->addItem(activities.value(i));
