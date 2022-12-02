@@ -29,7 +29,7 @@ UserInputWindow::UserInputWindow(QWidget *parent)
 
     connect(this->confirm, SIGNAL(clicked(bool)),this, SLOT(emitNewUserActivity(bool)));
     connect (this->confirm, SIGNAL(clicked(bool)), this, SLOT(close()));
-    connect(this, SIGNAL(sendNewActivity(Activity*)), this->parent, SLOT(pushNewAct(Activity*)));
+    connect(this, SIGNAL(sendNewActivity(const Activity&)), this->parent, SLOT(pushNewAct(const Activity&)));
 }
 
 // DESTRUCTOR
@@ -58,6 +58,6 @@ void UserInputWindow::emitNewUserActivity(bool click)
 
         auto newAct= new Activity(text, initTime, finTime);
 
-        emit sendNewActivity(newAct);
+        emit sendNewActivity(*newAct);
     }
 }

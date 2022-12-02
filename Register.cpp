@@ -11,18 +11,12 @@ Register::Register(const QString& name, const QDate& date)
     this->setDate(date);
 }
 
-// DESTRUCTOR
-Register::~Register(){
-    for(auto itr=this->getDailyActHead(); itr<= this->getDailyActTail(); itr++)
-        delete(*itr);
-}
-
 // SETTER
-void Register::setName(const QString& name){    this->name=name;    }
+void Register::setName(const QString& n){    this->name=n;    }
 
 void Register::setDate(const QDate& date){      this->date=date;    }
 
-void Register::addActivity(Activity* toAdd)
+void Register::addActivity(Activity& toAdd)
 {
     this->dailyActivities.push_back(toAdd);
 }
@@ -30,21 +24,21 @@ void Register::addActivity(Activity* toAdd)
 void Register::removeActivity(const QString& desc)
 {
     auto itr=this->dailyActivities.begin();
-    while((*itr)->getDescription()!=desc)
+    while((*itr).getDescription()!=desc)
         ++itr;
     this->dailyActivities.erase(itr);
 }
 
 // GETTER
-const QString& Register::getName(){     return this->name;  }
+const QString& Register::getName()const{     return this->name;  }
 
-const QDate& Register::getDate(){       return this->date;  }
+const QDate& Register::getDate()const{       return this->date;  }
 
-std::vector<Activity*>::iterator Register::getDailyActHead(){   return this->dailyActivities.begin();   }
+std::vector<Activity>::iterator Register::getDailyActHead(){   return this->dailyActivities.begin();   }
 
-std::vector<Activity*>::iterator Register::getDailyActTail(){   return this->dailyActivities.end();     }
+std::vector<Activity>::iterator Register::getDailyActTail(){   return this->dailyActivities.end();     }
 
-Activity* Register::getActivity(int pos)
+const Activity Register::getActivity(int pos)const
 {
     auto itr=dailyActivities.begin();
     for(int i=0; i<pos; i++)
@@ -52,7 +46,7 @@ Activity* Register::getActivity(int pos)
     return *itr;
 }
 
-int Register::getActivityLenght()
+int Register::getActivityLength()
 {
     int i=0;
     for(auto itr=this->getDailyActHead(); itr<this->getDailyActTail(); itr++)

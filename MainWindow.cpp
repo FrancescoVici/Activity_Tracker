@@ -34,13 +34,10 @@ MainWindow::MainWindow(QWidget *parent)
 // DESTRUCTOR
 MainWindow::~MainWindow()
 {
-    for(auto itr=registersList.begin(); itr<registersList.end();itr++)
-        delete(*itr);
     delete(addActButton);
     delete(deleteActButton);
     delete(registers);
     delete(activityTable);
-
 }
 
 // SETTER
@@ -56,11 +53,11 @@ void MainWindow::setTableModel()
     this->activityTable->setColumnWidth(2, 420);
 }
 
-void MainWindow::addRegister(Register* reg)
+void MainWindow::addRegister(Register &reg)
 {
     auto itr=this->registersList.begin();
     this->registersList.insert(itr, reg);
-    this->registers->addItem(reg->getName());
+    this->registers->addItem(reg.getName());
 }
 
 //void MainWindow::delRegister(Register* reg) {}
@@ -74,15 +71,15 @@ void MainWindow::addRowsToRegister(const QString& reg)
             this->activityTable->setRowHeight(i, 40);
         }
 
-        auto init=(*itr)->getInitTime();
+        auto init=(*itr).getInitTime();
         auto itemInitTime = new QTableWidgetItem(init.toString("HH:mm:ss"));
         this->activityTable->setItem(i, 0, itemInitTime);
 
-        auto fin=(*itr)->getFinTime();
+        auto fin= (*itr).getEndTime();
         auto itemFinTime = new QTableWidgetItem(fin.toString("HH:mm:ss"));
         this->activityTable->setItem(i, 1, itemFinTime);
 
-        auto desc=(*itr)->getDescription();
+        auto desc=(*itr).getDescription();
         auto itemDesc = new QTableWidgetItem(desc);
         this->activityTable->setItem(i, 2, itemDesc);
 
@@ -93,19 +90,20 @@ void MainWindow::addRowsToRegister(const QString& reg)
         this->activityTable->removeRow(i);
         ++i;
     }
+
 }
 
 
 // GETTER
-std::vector<Register*>::iterator MainWindow::getRegistersHead(){    return this->registersList.begin();   }
+std::vector<Register>::iterator MainWindow::getRegistersHead(){    return this->registersList.begin();   }
 
-std::vector<Register*>::iterator MainWindow::getRegistersTail(){    return this->registersList.end();     }
+std::vector<Register>::iterator MainWindow::getRegistersTail(){    return this->registersList.end();     }
 
-Register* MainWindow::getRegister(const QString& reg){
+std::vector<Register>::iterator MainWindow::getRegister(const QString& reg){
     auto itr=this->getRegistersHead();
-    while((*itr)->getName()!=reg)
+    while((*itr).getName()!=reg)
         ++itr;
-    return *itr;
+    return itr;
 }
 
 
@@ -123,7 +121,7 @@ void MainWindow::openUserDeleteWindow(bool click)
     if(click==0){
         auto descriptions=new QList<QString>;
         for(auto itr=this->getRegister(this->registers->currentText())->getDailyActHead();itr<this->getRegister(this->registers->currentText())->getDailyActTail(); itr++){
-            descriptions->push_back((*itr)->getDescription());
+            descriptions->push_back((*itr).getDescription());
         }
 
         auto *del=new UserDeleteWindow(*descriptions,this);
@@ -131,7 +129,7 @@ void MainWindow::openUserDeleteWindow(bool click)
     }
 }
 
-void MainWindow::pushNewAct(Activity* newAct)
+void MainWindow::pushNewAct(Activity newAct)
 {
     this->getRegister(this->registers->currentText())->addActivity(newAct);
     emit activityChanged(true);
@@ -148,7 +146,7 @@ void MainWindow::updateRegistersBox(bool changed)
     if (changed){
         auto itr = registersList.begin();
         for (int i = 0; i < registersList.size(); i++) {
-            registers->addItem((*itr)->getName());
+            registers->addItem((*itr).getName());
             itr++;
         }
     }

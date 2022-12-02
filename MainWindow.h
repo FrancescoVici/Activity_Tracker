@@ -31,13 +31,13 @@ public:
     virtual ~MainWindow();
     // SETTER
     void setTableModel();
-    void addRegister(Register* reg);
+    void addRegister(Register &reg);
     /// void delRegister(Register* reg);
-    Register* getRegister(const QString& reg);
+    std::vector<Register>::iterator getRegister(const QString& reg);
     void addRowsToRegister(const QString& reg);
     // GETTER
-    std::vector<Register*>::iterator getRegistersHead();
-    std::vector<Register*>::iterator getRegistersTail();
+    std::vector<Register>::iterator getRegistersHead();
+    std::vector<Register>::iterator getRegistersTail();
 
 
 signals:
@@ -46,7 +46,7 @@ signals:
 public slots:
     void openUserInputWindow(bool click=0);
     void openUserDeleteWindow(bool click=0);
-    void pushNewAct(Activity* newAct);
+    void pushNewAct(Activity newAct);
     void receiveActivityToDelete(const QString& toRemove);
     void updateRegistersBox(bool changed);
     void updateActivitiesTable(bool changed);
@@ -57,7 +57,7 @@ private:
     QPushButton* deleteActButton;
 
     QComboBox* registers;
-    std::vector<Register*> registersList;
+    std::vector<Register> registersList;
 
     QTableWidget* activityTable;
 

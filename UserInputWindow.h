@@ -27,7 +27,7 @@ public:
     ~UserInputWindow()override;
 
 signals:
-    void sendNewActivity(Activity* newAct);
+    void sendNewActivity(const Activity& newAct);
 
 public slots:
     void emitNewUserActivity(bool click);

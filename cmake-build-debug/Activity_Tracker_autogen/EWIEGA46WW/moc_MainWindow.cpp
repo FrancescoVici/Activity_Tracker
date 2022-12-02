@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[15];
-    char stringdata0[193];
+    char stringdata0[192];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -40,19 +40,19 @@ QT_MOC_LITERAL(4, 36, 19), // "openUserInputWindow"
 QT_MOC_LITERAL(5, 56, 5), // "click"
 QT_MOC_LITERAL(6, 62, 20), // "openUserDeleteWindow"
 QT_MOC_LITERAL(7, 83, 10), // "pushNewAct"
-QT_MOC_LITERAL(8, 94, 9), // "Activity*"
-QT_MOC_LITERAL(9, 104, 6), // "newAct"
-QT_MOC_LITERAL(10, 111, 23), // "receiveActivityToDelete"
-QT_MOC_LITERAL(11, 135, 8), // "toRemove"
-QT_MOC_LITERAL(12, 144, 18), // "updateRegistersBox"
-QT_MOC_LITERAL(13, 163, 21), // "updateActivitiesTable"
-QT_MOC_LITERAL(14, 185, 7) // "current"
+QT_MOC_LITERAL(8, 94, 8), // "Activity"
+QT_MOC_LITERAL(9, 103, 6), // "newAct"
+QT_MOC_LITERAL(10, 110, 23), // "receiveActivityToDelete"
+QT_MOC_LITERAL(11, 134, 8), // "toRemove"
+QT_MOC_LITERAL(12, 143, 18), // "updateRegistersBox"
+QT_MOC_LITERAL(13, 162, 21), // "updateActivitiesTable"
+QT_MOC_LITERAL(14, 184, 7) // "current"
 
     },
     "MainWindow\0activityChanged\0\0changed\0"
     "openUserInputWindow\0click\0"
     "openUserDeleteWindow\0pushNewAct\0"
-    "Activity*\0newAct\0receiveActivityToDelete\0"
+    "Activity\0newAct\0receiveActivityToDelete\0"
     "toRemove\0updateRegistersBox\0"
     "updateActivitiesTable\0current"
 };
@@ -116,7 +116,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 3: _t->openUserInputWindow(); break;
         case 4: _t->openUserDeleteWindow((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 5: _t->openUserDeleteWindow(); break;
-        case 6: _t->pushNewAct((*reinterpret_cast< Activity*(*)>(_a[1]))); break;
+        case 6: _t->pushNewAct((*reinterpret_cast< Activity(*)>(_a[1]))); break;
         case 7: _t->receiveActivityToDelete((*reinterpret_cast< const QString(*)>(_a[1]))); break;
         case 8: _t->updateRegistersBox((*reinterpret_cast< bool(*)>(_a[1]))); break;
         case 9: _t->updateActivitiesTable((*reinterpret_cast< bool(*)>(_a[1]))); break;

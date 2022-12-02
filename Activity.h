@@ -21,15 +21,15 @@ public:
     // SETTER
     void setDescription(const QString& des);
     void setInitTime(const QTime& init);
-    void setFinTime(const QTime& fin);
+    void setEndTime(const QTime& fin);
 
     // GETTER
-    const QString& getDescription();
-    const QTime& getInitTime();
-    const QTime& getFinTime();
+    const QString& getDescription() const;
+    const QTime& getInitTime()const;
+    const QTime& getEndTime()const;
 
 private:
-    QString descriprion;
+    QString description;
     QTime initialTime;
     QTime finalTime;
 };

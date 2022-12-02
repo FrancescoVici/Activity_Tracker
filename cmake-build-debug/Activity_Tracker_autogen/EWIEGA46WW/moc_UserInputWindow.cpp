@@ -23,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_UserInputWindow_t {
     QByteArrayData data[7];
-    char stringdata0[76];
+    char stringdata0[75];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,14 +35,14 @@ static const qt_meta_stringdata_UserInputWindow_t qt_meta_stringdata_UserInputWi
 QT_MOC_LITERAL(0, 0, 15), // "UserInputWindow"
 QT_MOC_LITERAL(1, 16, 15), // "sendNewActivity"
 QT_MOC_LITERAL(2, 32, 0), // ""
-QT_MOC_LITERAL(3, 33, 9), // "Activity*"
-QT_MOC_LITERAL(4, 43, 6), // "newAct"
-QT_MOC_LITERAL(5, 50, 19), // "emitNewUserActivity"
-QT_MOC_LITERAL(6, 70, 5) // "click"
+QT_MOC_LITERAL(3, 33, 8), // "Activity"
+QT_MOC_LITERAL(4, 42, 6), // "newAct"
+QT_MOC_LITERAL(5, 49, 19), // "emitNewUserActivity"
+QT_MOC_LITERAL(6, 69, 5) // "click"
 
     },
     "UserInputWindow\0sendNewActivity\0\0"
-    "Activity*\0newAct\0emitNewUserActivity\0"
+    "Activity\0newAct\0emitNewUserActivity\0"
     "click"
 };
 #undef QT_MOC_LITERAL
@@ -81,14 +81,14 @@ void UserInputWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         auto *_t = static_cast<UserInputWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->sendNewActivity((*reinterpret_cast< Activity*(*)>(_a[1]))); break;
+        case 0: _t->sendNewActivity((*reinterpret_cast< const Activity(*)>(_a[1]))); break;
         case 1: _t->emitNewUserActivity((*reinterpret_cast< bool(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (UserInputWindow::*)(Activity * );
+            using _t = void (UserInputWindow::*)(const Activity & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&UserInputWindow::sendNewActivity)) {
                 *result = 0;
                 return;
@@ -138,7 +138,7 @@ int UserInputWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void UserInputWindow::sendNewActivity(Activity * _t1)
+void UserInputWindow::sendNewActivity(const Activity & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
