@@ -72,11 +72,11 @@ void MainWindow::addRowsToRegister(const QString& reg)
         }
 
         auto init=(*itr).getInitTime();
-        auto itemInitTime = new QTableWidgetItem(init.toString("HH:mm:ss"));
+        auto itemInitTime = new QTableWidgetItem(init.toString("HH:mm"));
         this->activityTable->setItem(i, 0, itemInitTime);
 
         auto fin= (*itr).getEndTime();
-        auto itemFinTime = new QTableWidgetItem(fin.toString("HH:mm:ss"));
+        auto itemFinTime = new QTableWidgetItem(fin.toString("HH:mm"));
         this->activityTable->setItem(i, 1, itemFinTime);
 
         auto desc=(*itr).getDescription();

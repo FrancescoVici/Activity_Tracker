@@ -19,6 +19,15 @@ Activity::Activity(const QString& des, const QTime& init, const QTime& fin)
 // DESTRUCTOR
 // Activity::~Activity(){}
 
+//OPERATORS
+bool Activity::operator==(Activity b)
+{
+    if(this->description==b.description && this->initialTime==b.initialTime && this->finalTime==b.finalTime){
+        return 1;
+    }else{
+        return 0;
+    }
+}
 
 
 // SETTER
@@ -36,3 +45,4 @@ const QString& Activity::getDescription()const{   return this->description;   }
 const QTime& Activity::getInitTime()const {       return this->initialTime;   }
 
 const QTime& Activity::getEndTime()const{         return this->finalTime;     }
+

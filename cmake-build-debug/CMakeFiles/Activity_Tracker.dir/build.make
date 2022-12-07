@@ -167,6 +167,48 @@ CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserDeleteWindow.cpp -o CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.s
 
+CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
+CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o: ../TestActivity.cpp
+CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o -MF CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestActivity.cpp
+
+CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestActivity.cpp > CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.i
+
+CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestActivity.cpp -o CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.s
+
+CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
+CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o: ../TestRegister.cpp
+CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o -MF CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestRegister.cpp
+
+CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestRegister.cpp > CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.i
+
+CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestRegister.cpp -o CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.s
+
+CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o: CMakeFiles/Activity_Tracker.dir/flags.make
+CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o: ../TestMainWindow.cpp
+CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o: CMakeFiles/Activity_Tracker.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o -MF CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o.d -o CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o -c /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestMainWindow.cpp
+
+CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestMainWindow.cpp > CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.i
+
+CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestMainWindow.cpp -o CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.s
+
 # Object files for target Activity_Tracker
 Activity_Tracker_OBJECTS = \
 "CMakeFiles/Activity_Tracker.dir/Activity_Tracker_autogen/mocs_compilation.cpp.o" \
@@ -175,7 +217,10 @@ Activity_Tracker_OBJECTS = \
 "CMakeFiles/Activity_Tracker.dir/Register.cpp.o" \
 "CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o" \
 "CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o" \
-"CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.o"
+"CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.o" \
+"CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o" \
+"CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o" \
+"CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o"
 
 # External object files for target Activity_Tracker
 Activity_Tracker_EXTERNAL_OBJECTS =
@@ -187,12 +232,16 @@ Activity_Tracker: CMakeFiles/Activity_Tracker.dir/Register.cpp.o
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/MainWindow.cpp.o
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/UserInputWindow.cpp.o
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/UserDeleteWindow.cpp.o
+Activity_Tracker: CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o
+Activity_Tracker: CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o
+Activity_Tracker: CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/build.make
 Activity_Tracker: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.3
+Activity_Tracker: /usr/lib/x86_64-linux-gnu/libQt5Test.so.5.15.3
 Activity_Tracker: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.3
 Activity_Tracker: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.3
 Activity_Tracker: CMakeFiles/Activity_Tracker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Activity_Tracker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Activity_Tracker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Activity_Tracker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

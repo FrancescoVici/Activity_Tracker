@@ -18,6 +18,9 @@ public:
     // DESTRUCTOR
     ~Activity()=default;
 
+    //OPERATOR
+    bool operator==(Activity b);
+
     // SETTER
     void setDescription(const QString& des);
     void setInitTime(const QTime& init);

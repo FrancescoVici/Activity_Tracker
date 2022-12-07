@@ -238,6 +238,78 @@ Register.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/Register.cpp.s
 .PHONY : Register.cpp.s
 
+TestActivity.o: TestActivity.cpp.o
+.PHONY : TestActivity.o
+
+# target to build an object file
+TestActivity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.o
+.PHONY : TestActivity.cpp.o
+
+TestActivity.i: TestActivity.cpp.i
+.PHONY : TestActivity.i
+
+# target to preprocess a source file
+TestActivity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.i
+.PHONY : TestActivity.cpp.i
+
+TestActivity.s: TestActivity.cpp.s
+.PHONY : TestActivity.s
+
+# target to generate assembly for a file
+TestActivity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestActivity.cpp.s
+.PHONY : TestActivity.cpp.s
+
+TestMainWindow.o: TestMainWindow.cpp.o
+.PHONY : TestMainWindow.o
+
+# target to build an object file
+TestMainWindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.o
+.PHONY : TestMainWindow.cpp.o
+
+TestMainWindow.i: TestMainWindow.cpp.i
+.PHONY : TestMainWindow.i
+
+# target to preprocess a source file
+TestMainWindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.i
+.PHONY : TestMainWindow.cpp.i
+
+TestMainWindow.s: TestMainWindow.cpp.s
+.PHONY : TestMainWindow.s
+
+# target to generate assembly for a file
+TestMainWindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestMainWindow.cpp.s
+.PHONY : TestMainWindow.cpp.s
+
+TestRegister.o: TestRegister.cpp.o
+.PHONY : TestRegister.o
+
+# target to build an object file
+TestRegister.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.o
+.PHONY : TestRegister.cpp.o
+
+TestRegister.i: TestRegister.cpp.i
+.PHONY : TestRegister.i
+
+# target to preprocess a source file
+TestRegister.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.i
+.PHONY : TestRegister.cpp.i
+
+TestRegister.s: TestRegister.cpp.s
+.PHONY : TestRegister.s
+
+# target to generate assembly for a file
+TestRegister.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Activity_Tracker.dir/build.make CMakeFiles/Activity_Tracker.dir/TestRegister.cpp.s
+.PHONY : TestRegister.cpp.s
+
 UserDeleteWindow.o: UserDeleteWindow.cpp.o
 .PHONY : UserDeleteWindow.o
 
@@ -332,6 +404,15 @@ help:
 	@echo "... Register.o"
 	@echo "... Register.i"
 	@echo "... Register.s"
+	@echo "... TestActivity.o"
+	@echo "... TestActivity.i"
+	@echo "... TestActivity.s"
+	@echo "... TestMainWindow.o"
+	@echo "... TestMainWindow.i"
+	@echo "... TestMainWindow.s"
+	@echo "... TestRegister.o"
+	@echo "... TestRegister.i"
+	@echo "... TestRegister.s"
 	@echo "... UserDeleteWindow.o"
 	@echo "... UserDeleteWindow.i"
 	@echo "... UserDeleteWindow.s"

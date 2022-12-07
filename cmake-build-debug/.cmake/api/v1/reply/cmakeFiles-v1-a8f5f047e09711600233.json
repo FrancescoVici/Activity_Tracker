@@ -301,6 +301,18 @@
 			"isCMake" : true,
 			"isExternal" : true,
 			"path" : "/opt/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseArguments.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigExtras.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",

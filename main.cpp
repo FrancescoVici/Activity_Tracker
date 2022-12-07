@@ -5,10 +5,16 @@
 #include "MainWindow.h"
 
 
+
+#include <QTest>
+#include "TestActivity.h"
+#include "TestRegister.h"
+#include "TestMainWindow.h"
+
 int main(int argc, char **argv)
 {
     QApplication app (argc, argv);
-    MainWindow* window=new MainWindow();
+  /*  MainWindow* window=new MainWindow();
 
     Register* r1= new Register("LUNEDÌ", *(new QDate(2022, 10, 31)));
     window->addRegister(*r1);
@@ -27,5 +33,17 @@ int main(int argc, char **argv)
 
     window->show();
     return app.exec();
+    */
+    int status = 0;
+    auto ASSERT_TEST = [&status, argc, argv](QObject* obj) {
+        status |= QTest::qExec(obj, argc, argv);
+        delete obj;
+    };
+
+    ASSERT_TEST(new TestActivity());
+    ASSERT_TEST(new TestRegister());
+    ASSERT_TEST(new TestMainWindow());
+
+    return status;
 }
 

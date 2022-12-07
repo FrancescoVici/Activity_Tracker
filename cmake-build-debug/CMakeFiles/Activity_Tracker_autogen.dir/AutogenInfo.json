@@ -74,7 +74,10 @@
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake",
 		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake",
-		"/opt/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseArguments.cmake"
+		"/opt/clion-2022.2.3/bin/cmake/linux/share/cmake-3.23/Modules/CMakeParseArguments.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Test/Qt5TestConfigExtras.cmake"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker",
 	"DEP_FILE" : "",
@@ -100,6 +103,24 @@
 			null
 		],
 		[
+			"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestActivity.h",
+			"Mu",
+			"EWIEGA46WW/moc_TestActivity.cpp",
+			null
+		],
+		[
+			"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestMainWindow.h",
+			"Mu",
+			"EWIEGA46WW/moc_TestMainWindow.cpp",
+			null
+		],
+		[
+			"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestRegister.h",
+			"Mu",
+			"EWIEGA46WW/moc_TestRegister.cpp",
+			null
+		],
+		[
 			"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/UserDeleteWindow.h",
 			"Mu",
 			"EWIEGA46WW/moc_UserDeleteWindow.cpp",
@@ -115,7 +136,14 @@
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug/Activity_Tracker_autogen/mocs_compilation.cpp",
-	"MOC_DEFINITIONS" : [ "QT_CORE_LIB", "QT_GUI_LIB", "QT_WIDGETS_LIB" ],
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_TESTCASE_BUILDDIR=\"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/cmake-build-debug\"",
+		"QT_TESTLIB_LIB",
+		"QT_WIDGETS_LIB"
+	],
 	"MOC_DEPEND_FILTERS" : 
 	[
 		[
@@ -130,6 +158,7 @@
 		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
 		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
 		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtTest",
 		"/usr/include/c++/11",
 		"/usr/include/x86_64-linux-gnu/c++/11",
 		"/usr/include/c++/11/backward",
@@ -174,6 +203,21 @@
 		],
 		[
 			"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/Register.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestActivity.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestMainWindow.cpp",
+			"Mu",
+			null
+		],
+		[
+			"/home/francesco/Scrivania/Activity_Tracker/Activity_Tracker/TestRegister.cpp",
 			"Mu",
 			null
 		],

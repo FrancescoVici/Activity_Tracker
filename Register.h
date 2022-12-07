@@ -34,7 +34,7 @@ public:
     const QDate& getDate()const;
     std::vector<Activity>::iterator getDailyActHead();
     std::vector<Activity>::iterator getDailyActTail();
-    const Activity getActivity(int pos)const;
+    Activity getActivity(int pos)const;
     int getActivityLength();
 
 private:

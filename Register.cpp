@@ -38,7 +38,7 @@ std::vector<Activity>::iterator Register::getDailyActHead(){   return this->dail
 
 std::vector<Activity>::iterator Register::getDailyActTail(){   return this->dailyActivities.end();     }
 
-const Activity Register::getActivity(int pos)const
+Activity Register::getActivity(int pos)const
 {
     auto itr=dailyActivities.begin();
     for(int i=0; i<pos; i++)
