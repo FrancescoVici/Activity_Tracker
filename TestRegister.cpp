@@ -36,3 +36,18 @@ void TestRegister::testRemoveActivity()
 
     QVERIFY(t->getActivityLength()==0);
 }
+
+void TestRegister::testRemoveNonExistingActivity()
+{
+    auto d1=*(new QString("Description1"));
+    Activity a=*(new Activity(d1, *(new QTime(12, 00)), *(new QTime(13, 00))));
+    auto d2=*(new QString("Description2"));
+    Activity b=*(new Activity(d2, *(new QTime(13, 00)), *(new QTime(14, 00))));
+    auto t=new Register("LUNEDÌ", *(new QDate(01, 01, 01)));
+
+    t->addActivity(a);
+    t->removeActivity(d2);
+
+    QVERIFY(*(t->getDailyActHead())==a);
+    QVERIFY(t->getActivityLength()==1);
+}

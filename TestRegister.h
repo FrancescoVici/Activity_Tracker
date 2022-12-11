@@ -17,6 +17,7 @@ private slots:
     void testConstructor();
     void testAddActivity();
     void testRemoveActivity();
+    void testRemoveNonExistingActivity();
 };
 
 

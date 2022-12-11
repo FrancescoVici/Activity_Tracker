@@ -23,10 +23,18 @@ void Register::addActivity(Activity& toAdd)
 
 void Register::removeActivity(const QString& desc)
 {
-    auto itr=this->dailyActivities.begin();
-    while((*itr).getDescription()!=desc)
+    bool found= false;
+    auto del= this->getDailyActTail();
+    auto itr=this->getDailyActHead();
+    while(itr<this->getDailyActTail()) {
+        if ((*itr).getDescription() == desc) {
+            del = itr;
+            found = true;
+        }
         ++itr;
-    this->dailyActivities.erase(itr);
+    }
+    if(found==true)
+        this->dailyActivities.erase(del);
 }
 
 // GETTER
