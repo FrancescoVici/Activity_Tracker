@@ -26,7 +26,7 @@ void Register::removeActivity(const QString& desc)
     bool found= false;
     auto del= this->getDailyActTail();
     auto itr=this->getDailyActHead();
-    while(itr<this->getDailyActTail()) {
+    for(auto i:this->dailyActivities){
         if ((*itr).getDescription() == desc) {
             del = itr;
             found = true;
@@ -48,10 +48,8 @@ std::vector<Activity>::iterator Register::getDailyActTail(){   return this->dail
 
 Activity Register::getActivity(int pos)const
 {
-    auto itr=dailyActivities.begin();
-    for(int i=0; i<pos; i++)
-        ++itr;
-    return *itr;
+    if(pos>=0)
+       return this->dailyActivities[pos];
 }
 
 int Register::getActivityLength()

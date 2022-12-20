@@ -27,7 +27,7 @@ public:
     void setEndTime(const QTime& fin);
 
     // GETTER
-    const QString& getDescription() const;
+    const QString& getDescription()const;
     const QTime& getInitTime()const;
     const QTime& getEndTime()const;
 
