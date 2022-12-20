@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-f912c81979b5cf715706e1014312cbc0 CMakeFiles/Activity_Tracker_autogen
