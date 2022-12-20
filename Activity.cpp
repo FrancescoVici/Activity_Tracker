@@ -11,7 +11,7 @@ Activity::Activity(const QString& des, const QTime& init, const QTime& fin)
 {
     this->setDescription(des);
     this->setInitTime(init);
-    this->setFinTime(fin);
+    this->setEndTime(fin);
 }
 
 
@@ -19,20 +19,30 @@ Activity::Activity(const QString& des, const QTime& init, const QTime& fin)
 // DESTRUCTOR
 // Activity::~Activity(){}
 
+//OPERATORS
+bool Activity::operator==(Activity b)
+{
+    if(this->description==b.description && this->initialTime==b.initialTime && this->finalTime==b.finalTime){
+        return 1;
+    }else{
+        return 0;
+    }
+}
 
 
 // SETTER
-void Activity::setDescription(const QString& des){  this->descriprion=des;      }
+void Activity::setDescription(const QString& des){  this->description=des;      }
 
 void Activity::setInitTime(const QTime& init){      this->initialTime=init;     }
 
-void Activity::setFinTime(const QTime& fin){        this->finalTime=fin;        }
+void Activity::setEndTime(const QTime& fin){ this->finalTime=fin;        }
 
 
 
 // GETTER
-const QString& Activity::getDescription(){  return this->descriprion;   }
+const QString& Activity::getDescription()const{   return this->description;   }
 
-const QTime& Activity::getInitTime(){       return this->initialTime;   }
+const QTime& Activity::getInitTime()const {       return this->initialTime;   }
 
-const QTime& Activity::getFinTime(){        return this->finalTime;     }
+const QTime& Activity::getEndTime()const{         return this->finalTime;     }
+

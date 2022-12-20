@@ -2,22 +2,51 @@
 
 #include "Activity.h"
 #include "Register.h"
+#include "MainWindow.h"
 
 
-int main() {
 
-    QString des="Allenamento Pallavolo";
-    auto init=new QTime(17, 45);
-    auto fin=new QTime(19, 00);
+#include <QTest>
+#include "TestActivity.h"
+#include "TestRegister.h"
+#include "TestMainWindow.h"
 
-    auto act1=new Activity(des, *init, *fin);
+int main(int argc, char **argv)
+{
+    QApplication app (argc, argv);
+    /*
 
-    QString name="Lunedì";
-    auto date=new QDate(2001, 1, 27);
+    MainWindow* window=new MainWindow();
 
-    auto reg1=new Register(name, *date, act1);
+    Register* r1= new Register("LUNEDÌ", *(new QDate(2022, 10, 31)));
+    window->addRegister(*r1);
+    Register* r2= new Register("MARTEDÌ", *(new QDate(2022, 11, 1)));
+    window->addRegister(*r2);
+    Register* r3= new Register("MERCOLEDÌ", *(new QDate(2022, 11, 2)));
+    window->addRegister(*r3);
+    Register* r4= new Register("GIOVEDÌ", *(new QDate(2022, 11, 3)));
+    window->addRegister(*r4);
+    Register* r5= new Register("VENERDÌ", *(new QDate(2022, 11, 4)));
+    window->addRegister(*r5);
+    Register* r6= new Register("SABATO", *(new QDate(2022, 11, 5)));
+    window->addRegister(*r6);
+    Register* r7= new Register("DOMENICA", *(new QDate(2022, 11, 6)));
+    window->addRegister(*r7);
 
-    std::cout<<(*(reg1->getDailyActHead()))->getDescription().toStdString()<<std::endl;
+    window->show();
+    return app.exec();
+  */
+    int status = 0;
+    auto ASSERT_TEST = [&status, argc, argv](QObject* obj) {
+        status |= QTest::qExec(obj, argc, argv);
+        delete obj;
+    };
 
+    ASSERT_TEST(new TestActivity());
+    ASSERT_TEST(new TestRegister());
+    ASSERT_TEST(new TestMainWindow());
+
+    return status;
 
 }
+

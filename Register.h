@@ -19,27 +19,28 @@
 class Register {
 public:
     // CONSTRUCTORS
-    Register(const QString& name, const QDate& date, Activity* toAdd = nullptr);
+    Register(const QString& name, const QDate& date);
     // DESTRUCTOR
-    ~Register();
+    ~Register()=default;
 
     // SETTER
     void setName(const QString& name);
     void setDate(const QDate& date);
-    void addActivity(Activity* toAdd);
-    void removeActivity(int pos);
+    void addActivity(Activity& toAdd);
+    void removeActivity(const QString& desc);
 
     // GETTER
-    const QString& getName();
-    const QDate& getDate();
-    std::vector<Activity*>::iterator getDailyActHead();
-    std::vector<Activity*>::iterator getDailyActTail();
-    Activity* getActivity(int pos);
+    const QString& getName()const;
+    const QDate& getDate()const;
+    std::vector<Activity>::iterator getDailyActHead();
+    std::vector<Activity>::iterator getDailyActTail();
+    Activity getActivity(int pos)const;
+    int getActivityLength();
 
 private:
     QString name;
     QDate date;
-    std::vector<Activity *> dailyActivities;
+    std::vector<Activity> dailyActivities;
 
 };
 

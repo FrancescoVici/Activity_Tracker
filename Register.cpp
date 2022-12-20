@@ -5,57 +5,57 @@
 #include "Register.h"
 
 // CONSTRUCTORS
-Register::Register(const QString& name, const QDate& date, Activity* toAdd)
+Register::Register(const QString& name, const QDate& date)
 {
     this->setName(name);
     this->setDate(date);
-    this->addActivity(toAdd);
 }
-
-
-
-// DESTRUCTOR
-Register::~Register()
-{
-    for(auto itr=this->dailyActivities.begin(); itr<this->dailyActivities.end(); itr++)
-        delete(*itr);
-}
-
-
 
 // SETTER
-void Register::setName(const QString& name){    this->name=name;    }
+void Register::setName(const QString& n){    this->name=n;    }
 
 void Register::setDate(const QDate& date){      this->date=date;    }
 
-void Register::addActivity(Activity* toAdd)
+void Register::addActivity(Activity& toAdd)
 {
     this->dailyActivities.push_back(toAdd);
 }
 
-void Register::removeActivity(int pos)
+void Register::removeActivity(const QString& desc)
 {
-    auto itr=dailyActivities.begin();
-    for(int i=0; i<pos; i++)
+    bool found= false;
+    auto del= this->getDailyActTail();
+    auto itr=this->getDailyActHead();
+    for(auto i:this->dailyActivities){
+        if ((*itr).getDescription() == desc) {
+            del = itr;
+            found = true;
+        }
         ++itr;
-    delete(*itr);
+    }
+    if(found==true)
+        this->dailyActivities.erase(del);
 }
 
-
-
 // GETTER
-const QString& Register::getName(){     return this->name;  }
+const QString& Register::getName()const{     return this->name;  }
 
-const QDate& Register::getDate(){       return this->date;  }
+const QDate& Register::getDate()const{       return this->date;  }
 
-std::vector<Activity*>::iterator Register::getDailyActHead(){   return this->dailyActivities.begin();   }
+std::vector<Activity>::iterator Register::getDailyActHead(){   return this->dailyActivities.begin();   }
 
-std::vector<Activity*>::iterator Register::getDailyActTail(){   return this->dailyActivities.end();     }
+std::vector<Activity>::iterator Register::getDailyActTail(){   return this->dailyActivities.end();     }
 
-Activity* Register::getActivity(int pos)
+Activity Register::getActivity(int pos)const
 {
-    auto itr=dailyActivities.begin();
-    for(int i=0; i<pos; i++)
-        ++itr;
-    return *itr;
+    if(pos>=0)
+       return this->dailyActivities[pos];
+}
+
+int Register::getActivityLength()
+{
+    int i=0;
+    for(auto itr=this->getDailyActHead(); itr<this->getDailyActTail(); itr++)
+        ++i;
+    return i;
 }
